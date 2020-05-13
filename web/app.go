@@ -8,6 +8,10 @@ import (
 	"github.com/justinas/alice" // 方便的使用中间件
 )
 
+func init() {
+	log.Println("app init方法")
+}
+
 // web应用类
 type App struct {
 	Router      *mux.Router

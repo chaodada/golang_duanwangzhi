@@ -11,6 +11,10 @@ import (
 type Middleware struct {
 }
 
+func init() {
+	log.Println("中间件init方法")
+}
+
 // 记录请求需要消耗的时间
 func (m Middleware) LoggingHandler(next http.Handler) http.Handler {
 	// 匿名函数

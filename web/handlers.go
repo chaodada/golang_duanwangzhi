@@ -6,6 +6,7 @@ import (
 	"duan/storage"
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 
 	"github.com/go-playground/validator"
@@ -15,6 +16,7 @@ import (
 var s storage.Storage
 
 func init() {
+	log.Println("handlers init方法")
 	redis := conf.C.Redis
 	s = storage.NewRedisCli(redis.Addr, redis.Pwd, redis.Db)
 }
