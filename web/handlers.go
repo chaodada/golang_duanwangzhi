@@ -16,7 +16,7 @@ import (
 var s storage.Storage
 
 func init() {
-	log.Println("handlers init方法")
+	log.Println("web包 handlers文件 init方法")
 	redis := conf.C.Redis
 	s = storage.NewRedisCli(redis.Addr, redis.Pwd, redis.Db)
 }

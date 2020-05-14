@@ -4,18 +4,18 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/gorilla/mux"
+	"github.com/gorilla/mux"    // 路由管理包
 	"github.com/justinas/alice" // 方便的使用中间件
 )
 
 func init() {
-	log.Println("app init方法")
+	log.Println("web包 app文件 init方法")
 }
 
 // web应用类
 type App struct {
-	Router      *mux.Router
-	Middlewares *Middleware
+	Router      *mux.Router //
+	Middlewares *Middleware // 中间件包的指针类型
 }
 
 // 应用初始化函数

@@ -12,7 +12,7 @@ type Middleware struct {
 }
 
 func init() {
-	log.Println("中间件init方法")
+	log.Println("web包 middleware文件 init方法")
 }
 
 // 记录请求需要消耗的时间

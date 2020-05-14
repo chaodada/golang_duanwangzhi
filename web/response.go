@@ -9,7 +9,7 @@ import (
 )
 
 func init() {
-	log.Println("返回头init方法")
+	log.Println("web包 response文件 init方法")
 }
 func sendErrorResponse(w http.ResponseWriter, errResp defs.Response) {
 	w.Header().Add("Content-Type", "application/json; charset=utf-8") //增加返回头
